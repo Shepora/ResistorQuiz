@@ -4,7 +4,8 @@ Se añadió una representación visual de los colores seleccionados mediante cí
 
 ### Ejemplo de código:
 
-```kotlin
+```kotlin 
+
 Row(verticalAlignment = Alignment.CenterVertically) {
     Box(
         modifier = Modifier
@@ -15,14 +16,12 @@ Row(verticalAlignment = Alignment.CenterVertically) {
     Spacer(modifier = Modifier.width(8.dp))
     Text(color.nameColor)
 }
+```
+## Personalización de Temas con Material 3
 
----
-### 2. Personalización de Temas con Material 3
+Para la aplicacion se personalizó el esquema de colores y la tipografía utilizando Material 3, adaptando la apariencia de la aplicación a un tema oscuro y definiendo estilos de texto personalizados.​
 
-```markdown
-Se utilizó la nueva librería **Material 3** para personalizar colores, tipografía y aplicar un tema oscuro en toda la aplicación.
-
-###  Ejemplo de código:
+### Ejemplo de código:
 
 ```kotlin
 private val DarkColorScheme = darkColorScheme(
@@ -38,36 +37,8 @@ val AppTypography = Typography(
         fontWeight = FontWeight.Bold
     )
 )
+```
+## Uso de clases enum
 
-
----
-
-###  3. Uso de Clases `enum`
-
-```markdown
-
-Se utilizó una clase `enum` para definir los diferentes colores de banda. Esta técnica permite estructurar mejor los datos constantes, como los valores y tolerancias asociados a cada color.
-
-### Ejemplo de código:
-
-```kotlin
-enum class ColorBand(
-    val nameColor: String,
-    val value: Int?,
-    val multiplier: Double?,
-    val tolerance: String?
-) {
-    NEGRO("Negro", 0, 1.0, null),
-    MARRON("Marrón", 1, 10.0, "±1%"),
-    ROJO("Rojo", 2, 100.0, "±2%"),
-    NARANJA("Naranja", 3, 1000.0, null),
-    AMARILLO("Amarillo", 4, 10000.0, null),
-    VERDE("Verde", 5, 100000.0, "±0.5%"),
-    AZUL("Azul", 6, 1000000.0, "±0.25%"),
-    VIOLETA("Violeta", 7, 10000000.0, "±0.1%"),
-    GRIS("Gris", 8, 100000000.0, "±0.05%"),
-    BLANCO("Blanco", 9, 1000000000.0, null),
-    DORADO("Dorado", null, 0.1, "±5%"),
-    PLATEADO("Plateado", null, 0.01, "±10%")
-}
+Una clase enum (enumeración) nos sirve para declarar un conjunto fijo y limitado de constantes. Cada constante puede tener propiedades y comportamientos. Son útiles cuando se maneja un grupo de valores que no cambian, como en este caso los colores de bandas de una resistencia.
 
