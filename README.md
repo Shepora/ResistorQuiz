@@ -1,8 +1,8 @@
-## 🎨 Visualización de Colores con Indicadores Circulares
+## Visualización de Colores con Indicadores Circulares
 
 Se añadió una representación visual de los colores seleccionados mediante círculos de color, facilitando la identificación rápida de las bandas de resistencia por parte del usuario.
 
-### 📌 Ejemplo de código:
+### Ejemplo de código:
 
 ```kotlin
 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -17,13 +17,12 @@ Row(verticalAlignment = Alignment.CenterVertically) {
 }
 
 ---
-
-### 🌙 2. Personalización de Temas con Material 3
+### 2. Personalización de Temas con Material 3
 
 ```markdown
 Se utilizó la nueva librería **Material 3** para personalizar colores, tipografía y aplicar un tema oscuro en toda la aplicación.
 
-### 📌 Ejemplo de código:
+###  Ejemplo de código:
 
 ```kotlin
 private val DarkColorScheme = darkColorScheme(
@@ -43,14 +42,13 @@ val AppTypography = Typography(
 
 ---
 
-### 🧱 3. Uso de Clases `enum`
+###  3. Uso de Clases `enum`
 
 ```markdown
-## 🧱 Uso de Clases `enum`
 
 Se utilizó una clase `enum` para definir los diferentes colores de banda. Esta técnica permite estructurar mejor los datos constantes, como los valores y tolerancias asociados a cada color.
 
-### 📌 Ejemplo de código:
+### Ejemplo de código:
 
 ```kotlin
 enum class ColorBand(
